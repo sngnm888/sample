@@ -1,0 +1,345 @@
+
+
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    z-index: 1000; /* 他の要素より手前に表示 */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 100px; /* ロゴのサイズを調整 */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* ハンバーガーメニューの右端に20pxの余白を追加 */
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.bar {
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 25px;
+    margin: 0px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center; /* 中央寄せに変更 */
+    }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+
+
+
+
+/* メイン画像のスタイル */
+.main-image {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px; /* 上方向のマージンを追加 */
+    
+}
+
+.main-image img {
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+    
+}
+
+.main-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* メニューの大見出しスタイル */
+.menu-header h2 {
+    text-align: center; /* 中央寄せを追加 */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* おすすめ料理のスタイル */
+.recommended-dishes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.dish img {
+    width: 100%;
+    border: 3px solid #000; /* 黒い四角い枠 */
+    border-radius: 0; /* 丸みをなくす */
+}
+
+.dish-description {
+    padding: 10px;
+}
+
+.dish-description h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.dish-description p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* 店舗の特徴・こだわりスタイルを変更 */
+.store-features {
+    text-align: center;
+    margin: 50px 0; /* 上下の余白を調整 */
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.feature-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.feature-container img {
+    width: 35%; /* 画像の幅を設定 */
+    border-radius: 0px; /* 画像に角丸を追加 */
+    border: 3px solid #000; /* 黒い四角い枠を追加 */
+}
+
+.feature-description {
+    width: 50%; /* 説明の幅を設定 */
+    padding: 20px;
+    text-align: left;
+}
+
+.feature-description p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* 余白用のスタイル */
+.spacer {
+    height: 20px; /* 余白の高さを設定 */
+    width: 100%;
+}
+
+/* 余白用のスタイル */
+.spacer2 {
+    height: 100px; /* 余白の高さを設定 */
+    width: 100%;
+}
+
+/* Newsセクションのスタイル */
+.news {
+    text-align: center;
+    margin: 50px auto; /* 左右に均等な余白を追加 */
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.view-all-news {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #dc3545; /* 赤い背景色 */
+    color: #fff; /* 白い文字色 */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.view-all-news:hover {
+    text-decoration: underline;
+}
+
+/* News一覧のスタイル */
+.news-list {
+    margin: 20px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.news-date {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.news-title {
+    margin: 0;
+}
+
+
+/* 店舗情報セクションのスタイル */
+.store-info {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.google-map {
+    width: 100%; /* または必要な幅をピクセル単位で指定 */
+    height: 400px; /* または必要な高さをピクセル単位で指定 */
+    margin-bottom: 20px; /* 必要に応じて余白を追加 */
+}
+
+.google-map iframe {
+    width: 100% !important;
+    height: 500px !important;
+}
+
+
+.text-info {
+    width: 100%;
+    max-width: 600px; /* テーブルの最大幅を設定 */
+    margin: 0 auto; /* テーブルを中央寄せにする */
+    border-collapse: collapse;
+}
+
+.text-info th, .text-info td {
+    border: 1px solid #ddd; /* セルのボーダーを追加 */
+    padding: 10px;
+    text-align: left;
+}
+
+.text-info th {
+    background-color: #f2f2f2; /* ヘッダーの背景色を追加 */
+}
+
+/* SNSアイコンのスタイル */
+.sns-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.sns-icon {
+    width: 48px;
+}
+
+.sns-icon img {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sns-icon img:hover {
+    opacity: 0.8;
+}
+
+/* 既存のスタイルの後に以下を追加 */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.privacy-policy,
+.copyright {
+    flex: 1;
+}
+
+/* 既存のスタイルの後に以下を追加 */
+
+.privacy-policy a {
+    color: #fff;
+    text-decoration: none; /* リンクの下線をなくす場合 */
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline; /* マウスホバー時にリンクの下線を表示する場合 */
+}
+
+
+
+
