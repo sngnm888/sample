@@ -1,0 +1,255 @@
+
+
+
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    z-index: 1000; /* 他の要素より手前に表示 */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 100px; /* ロゴのサイズを調整 */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* ハンバーガーメニューの右端に20pxの余白を追加 */
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 25px;
+}
+
+.bar {
+    background-color: rgb(0, 0, 0);
+    height: 3px;
+    width: 25px;
+    margin: 0px 0;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center; /* 中央寄せに変更 */
+    }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+
+
+/* メイン画像のスタイル */
+.main-image {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px; /* 上方向のマージンを追加 */
+
+}
+
+.main-image img {
+    width: 100%;
+    display: block;
+    
+}
+
+.main-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* メニューの大見出しスタイル */
+.menu-header h2 {
+    text-align: center; /* 中央寄せを追加 */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* おすすめ料理のスタイル */
+.recommended-dishes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish {
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+.dish img {
+    width: 100%;
+    border: 3px solid #000; /* 黒い四角い枠 */
+    border-radius: 0; /* 丸みをなくす */
+}
+
+.dish-description {
+    padding: 10px;
+}
+
+.dish-description h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.dish-description p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* 店舗の特徴・こだわりスタイルを変更 */
+.store-features {
+    text-align: center;
+    margin: 50px 0; /* 上下の余白を調整 */
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.feature-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.feature-container img {
+    width: 35%; /* 画像の幅を設定 */
+    border-radius: 0px; /* 画像に角丸を追加 */
+    border: 3px solid #000; /* 黒い四角い枠を追加 */
+}
+
+.feature-description {
+    width: 50%; /* 説明の幅を設定 */
+    padding: 20px;
+    text-align: left;
+}
+
+.feature-description p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+
+
+/* 既存のスタイルの後に以下を追加 */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.privacy-policy,
+.copyright {
+    flex: 1;
+}
+
+/* 既存のスタイルの後に以下を追加 */
+
+.privacy-policy a {
+    color: #fff;
+    text-decoration: none; /* リンクの下線をなくす場合 */
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline; /* マウスホバー時にリンクの下線を表示する場合 */
+}
+
+
+
+
+  .container {
+    max-width: 600px; /* 最大幅を調整 */
+    margin: 0 auto;
+    padding: 30px; /* 余白を大きく調整 */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .catchphrase {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* 中央寄せに変更 */
+    margin-bottom: 20px; /* 下の余白を増やす */
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
