@@ -236,9 +236,8 @@ footer {
 
 
   .container {
-    max-width: 600px; /* 最大幅を調整 */
     margin: 0 auto;
-    padding: 30px; /* 余白を大きく調整 */
+    padding: 100px; /* 余白を大きく調整 */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
